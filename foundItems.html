@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="raw">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <h3>Found items:</h3>
+    <ul>
+      <li ng-repeat="item in Terms.items">
+      <dl>
+      <dt>Name: {{item.name}}</dt>
+      <dd>
+      Short name: {{item.short_name}}<br>
+      Description: {{item.description}}
+        <button ng-click="Terms.onRemove({index: $index});"
+        class="btn btn-danger-outline">Don't want this one!</button>
+      </dd>
+      </dl>
+      </li>
+    </ul>
+    <div ng-hide="Terms.items.length !== 0">Nothing found!</div>
+    </div>
+  </div>
+</div>
